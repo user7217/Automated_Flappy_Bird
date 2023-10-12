@@ -97,17 +97,17 @@ class Bird:
         return pygame.mask.from_surface(self.img)
 
 
-class Pipe:
-    GAP = 200
-    VELOCITY = 5
+class Pipe: #
+    GAP = 200 # Gap between pipes
+    VELOCITY = 5 # Speed of pipes
 
-    def __init__(self, x):
-        self.x = x
-        self.height = 0
+    def __init__(self, x): # x is the x coordinate of the pipe
+        self.x = x # x coordinate of the pipe
+        self.height = 0 # Height of the pipe
 
-        self.top = 0
-        self.bottom = 0
-        self.PIPE_TOP = pygame.transform.flip(PIPE_IMAGE, False, True)
+        self.top = 0 # Top of the pipe
+        self.bottom = 0 # Bottom of the pipe
+        self.PIPE_TOP = pygame.transform.flip(PIPE_IMAGE, False, True) # Top pipe image
         self.PIPE_BOTTOM = PIPE_IMAGE
 
         self.passed = False
